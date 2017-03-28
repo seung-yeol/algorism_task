@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/삽입정렬.iml" filepath="$PROJECT_DIR$/삽입정렬.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sort_comparison.iml" filepath="$PROJECT_DIR$/sort_comparison.iml" />
     </modules>
   </component>
 </project>
