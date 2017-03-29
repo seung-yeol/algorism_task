@@ -7,8 +7,8 @@ public abstract class ArraySort {
     protected int count = 0;
     protected int needSort;
     protected int target = 0;
-    public void sortedArray(int[] array ,int arraySize){
-        for (int i = 0; i < arraySize  ; i++){
+    public void sortedArray(int[] array ){
+        for (int i = 0; i < array.length  ; i++){
             System.out.print(array[i] + "\t");
             if (i % 20 == 19) System.out.println();
         }

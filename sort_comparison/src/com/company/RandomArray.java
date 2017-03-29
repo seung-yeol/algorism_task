@@ -1,16 +1,17 @@
 package com.company;
-
 /**
  * Created by Osy on 2017-03-28.
  */
-public class RandomArray {
-    int[] ranArray;
-    public RandomArray(){
-        setArray();
+class RandomArray {
+    public static int zzz = 1;
+    private int[] ranArray;
+    public RandomArray(int arrayLength){
+        setArray(arrayLength);
     }
-    public void setArray() {
-        for (int i = 0; i < ranArray.length; i++) {
-            ranArray[i] = (int) (Math.random() * 200);  //최대 199뜸
+    private void setArray(int arrayLength) {
+        ranArray = new int[arrayLength];
+        for (int i = 0; i < arrayLength; i++) {
+            ranArray[i] = (int) (Math.random() * (arrayLength*2)); //길이의 두배만큼의 값이 나
 
             for (int j = 0; j < i; j++) {               //이전에 나왓을경우 더돌림
                 if (ranArray[i] == ranArray[j]) {
