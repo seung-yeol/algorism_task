@@ -14,13 +14,13 @@ public class Main {
 
         randomArray = new RandomArray(100);
         array = randomArray.getArray();
-
         m.zz(new MergeSort(),array);
-
 
     }
     public void zz(ArraySort arraySort, int[] array){
         arraySort.sortStart(array);
-        arraySort.sortedArray(array);
+        arraySort.getSortedArray();
+        int count = arraySort.getCount();
+        System.out.println(count);
     }
 }

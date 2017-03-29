@@ -28,5 +28,6 @@ public class InsertionSort extends ArraySort {
                 count++;
             }
         }
+        this.array = array;
     }
 }
