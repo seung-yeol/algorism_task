@@ -5,22 +5,22 @@ import com.company.sort.ArraySort;
 public class MergeSort extends ArraySort {
     int[] sortArray;
     @Override
-    public void sortStart(int[] array) {
+    public void sortStart() {
         sortArray = new int[array.length];
-        mergeSort(array, 0, array.length-1);
+        mergeSort(0, array.length-1);
         this.array = sortArray;
     }
-    private void mergeSort(int[] array, int left, int right) {
+    private void mergeSort( int left, int right) {
         int mid;
         this.count++;
         if(left < right){
-            mid = (left + right)/2;
-            mergeSort(array, left, mid);
-            mergeSort(array, mid+1, right);
-            merge(array, left, mid, right);
+            mid = ( left + right)/2;
+            mergeSort( left, mid);
+            mergeSort(mid+1, right);
+            merge( left, mid, right);
         }
     }
-    private void merge(int[] array, int left, int mid, int right){
+    private void merge(int left, int mid, int right){
         int sLeft = left;
         int sMid = mid + 1;
         int target = left;
@@ -35,6 +35,7 @@ public class MergeSort extends ArraySort {
                     sortArray[target] = array[sMid];
                     sMid++;
                 }
+                this.count++;
             }
             else if( sLeft <= mid && sMid > right){ //왼쪽거 남음
                 sortArray[target] = array[sLeft];

@@ -7,7 +7,7 @@ import com.company.sort.ArraySort;
  */
 public class HeapSort extends ArraySort{
     @Override
-    public void sortStart(int[] array) {
+    public void sortStart() {
 
     }
 }

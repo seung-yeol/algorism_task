@@ -3,7 +3,6 @@ package com.company;
  * Created by Osy on 2017-03-28.
  */
 class RandomArray {
-    public static int zzz = 1;
     private int[] ranArray;
     public RandomArray(int arrayLength){
         setArray(arrayLength);
