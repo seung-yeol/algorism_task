@@ -10,23 +10,22 @@ public class Main {
     static int i = 10;
     public static void main(String[] args) {
         Main m = new Main();
-        m.zz();
+        m.sortGo();
     }
     public void sort(ArraySort arraySort, int[] array){
         arraySort.setArray(array);
         arraySort.sortStart();
         printArray(arraySort.getArray());
-        int count = arraySort.getCount();
-        System.out.println(count);
+        System.out.println(arraySort.getCount());
     }
-    public void zz(){
-        RandomArray randomArray;
-        randomArray = new RandomArray(100);
+    public void sortGo(){
+        RandomArray randomArray = new RandomArray(100);
         int[] array = randomArray.getArray();
 
         sort(new InsertionSort(),array);
         sort(new MergeSort(),array);
         sort(new QuickSort(),array);
+        sort(new HeapSort(),array);
     }
     void printArray(int[] array){
         for (int i = 0 ; i < array.length ; i++){

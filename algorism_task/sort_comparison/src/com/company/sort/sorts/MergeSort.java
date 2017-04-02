@@ -12,7 +12,7 @@ public class MergeSort extends ArraySort {
     }
     private void mergeSort( int left, int right) {
         int mid;
-        this.count++;
+        count++;
         if(left < right){
             mid = ( left + right)/2;
             mergeSort( left, mid);
@@ -35,7 +35,7 @@ public class MergeSort extends ArraySort {
                     sortArray[target] = array[sMid];
                     sMid++;
                 }
-                this.count++;
+                count++;
             }
             else if( sLeft <= mid && sMid > right){ //왼쪽거 남음
                 sortArray[target] = array[sLeft];
@@ -46,11 +46,11 @@ public class MergeSort extends ArraySort {
                 sMid++;
             }
             target++;
-            this.count++;
+            count++;
         }
         for(int i = left; i < right+1 ; i++){
             array[i] = sortArray[i];
-            this.count++;
+            count++;
         }
     }
 }

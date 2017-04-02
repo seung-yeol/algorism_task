@@ -8,14 +8,13 @@ import com.company.sort.ArraySort;
 public class InsertionSort extends ArraySort {
     @Override
     public void sortStart() {
-        int tmp = 0;
+        int tmp, target;
         for(int loc = 1; loc < array.length; loc++){
             tmp = array[loc];
             for(target = loc-1; target >= 0; target--){
                 if (tmp < array[target]){
                     array[target+1] = array[target];
                     count++;
-
                 }
                 else {
                     count++;
@@ -25,6 +24,5 @@ public class InsertionSort extends ArraySort {
             array[target+1] = tmp;
             count++;
         }
-
     }
 }

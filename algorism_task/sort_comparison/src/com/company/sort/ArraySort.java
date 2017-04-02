@@ -5,8 +5,8 @@ package com.company.sort;
  */
 public abstract class ArraySort {
     protected int count = 0;
-    protected int target = 0;
     protected int[] array;
+    public abstract void sortStart();
     public int[] getArray(){
         if (array == null){
             throw new NullPointerException();
@@ -20,5 +20,10 @@ public abstract class ArraySort {
         this.array = new int[array.length];
         System.arraycopy(array, 0, this.array,0, array.length);
     }
-    public abstract void sortStart();
+    protected void swap(int i, int j) {
+        int tmp = array[i];
+        array[i] = array[j];
+        array[j] = tmp;
+        count++;
+    }
 }

@@ -19,24 +19,19 @@ public class QuickSort extends ArraySort {
     }
     public int partition( int j, int r){
         int bibi = array[r];
-        int lCnt = j;
-        int tmp;
+        int left = j;
 
         while (j < r){
             if(array[j] <= bibi){
-                tmp = array[lCnt];
-                array[lCnt] = array[j];
-                array[j] = tmp;
-                lCnt++;
+                swap(left, j);
+                left++;
                 count++;
             }
             j++;
             count++;
         }
-        tmp = array[lCnt];
-        array[lCnt] = bibi;
-        array[r] = tmp;
+        swap(left, r);
         count++;
-        return lCnt;
+        return left;
     }
 }
