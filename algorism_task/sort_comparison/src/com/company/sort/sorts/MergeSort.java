@@ -8,7 +8,6 @@ public class MergeSort extends ArraySort {
     public void sortStart() {
         sortArray = new int[array.length];
         mergeSort(0, array.length-1);
-        this.array = sortArray;
     }
     private void mergeSort( int left, int right) {
         int mid;

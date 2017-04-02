@@ -7,7 +7,6 @@ import com.company.sort.sorts.MergeSort;
 import com.company.sort.sorts.QuickSort;
 
 public class Main {
-    static int i = 10;
     public static void main(String[] args) {
         Main m = new Main();
         m.sortGo();
@@ -19,7 +18,7 @@ public class Main {
         System.out.println(arraySort.getCount());
     }
     public void sortGo(){
-        RandomArray randomArray = new RandomArray(100);
+        RandomArray randomArray = new RandomArray(200);
         int[] array = randomArray.getArray();
 
         sort(new InsertionSort(),array);
