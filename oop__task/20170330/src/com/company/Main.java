@@ -20,7 +20,7 @@ public class Main {
         int x = sc.nextInt();
         int y = sc.nextInt();
 
-        Q1 q1 = new Q1();
+        Q1 q1 = new Q1( x, y);
         q1.숫자입력(x, y);
         답(q1);
     }
@@ -32,8 +32,7 @@ public class Main {
         int y = sc.nextInt();
         int z = sc.nextInt();
 
-        Q2 q2 = new Q2();
-        q2.숫자입력(x, y, z);
+        Q2 q2 = new Q2( x, y, z);
         답(q2);
     }
     void 답(Question question){

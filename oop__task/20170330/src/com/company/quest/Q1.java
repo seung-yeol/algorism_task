@@ -1,55 +1,61 @@
 package com.company.quest;
-
-import com.company.quest.Question;
-
 /**
  * Created by Osy on 2017-03-30.
  */
 public class Q1 extends Question {
-    int x , y;
+    int x, y;
+    public Q1(int x, int y){
+        this.x = x;
+        this.y = y;
+    }
 
     @Override
     public void 정답1() {
-        덧셈();
-        뺄셈();
-        곱셈();
-        나머지();
+        출력("더한 값 ", 덧셈());
+        출력("뺀 값 ", 뺄셈());
+        출력("곱한 값 ", 곱셈());
+        출력("나머지 값 ", 나머지());
     }
+
     @Override
     public void 정답2() {
-        두수비교();
+        출력("더 큰 값 ", 두수비교());
     }
+
     public void 숫자입력(int x, int y){
         this.x = x;
         this.y = y;
     }
 
-    void 덧셈(){
+    int 덧셈(){
         int sum = x + y;
-        System.out.println("두수의 합은 : " + sum);
+        return sum;
     }
-    void 뺄셈(){
+
+    int 뺄셈(){
         int sub = x - y;
-        System.out.println("두수의 차는 : " + sub);
-
+        return sub;
     }
-    void 곱셈(){
+
+    int 곱셈(){
         int mul = x * y;
-        System.out.println("두수의 곱은 : " + mul);
+        return mul;
 
     }
-    void 나머지(){
+    int 나머지(){
         int mod = x % y;
-        System.out.println("두수의 나눗셈의 나머지는 : " + mod);
+        return mod;
     }
 
-    void 두수비교(){
-        System.out.print("더 큰수는 : ");
+    int 두수비교(){
+        int big = x;
         if (x < y){
-            System.out.println( y );
+            big = y;
         }
-        else {
-            System.out.println( x );
-        }
+        return big;
+    }
+
+    void 출력(String s,int a){
+        System.out.println(s + a);
     }
 }

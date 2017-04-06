@@ -5,44 +5,63 @@ package com.company.quest;
  */
 public class Q2 extends Question {
     int x, y, z;
-    int[] array;
+    int 첫, 둘, 셋;
 
-    @Override
-    public void 정답1() {
-        순서대로();
-    }
-    @Override
-    public void 정답2() {
-        두번째큰거();
-    }
-    public void 숫자입력(int x, int y, int z){
+    public Q2(int x, int y, int z) {
         this.x = x;
         this.y = y;
         this.z = z;
-        숫자정렬();
     }
-    void 숫자정렬(){        //삽입정렬을 이용한 숫자정렬
-        array = new int[]{ x, y, z};
 
-        for (int i = 1; i < 3; i++) {
-            int 정렬대상 = array[i];
-            int 비교대상 = i - 1;
-
-            while (비교대상 >= 0 && 정렬대상 < array[비교대상]) {
-                array[비교대상+1] = array[비교대상];
-                비교대상--;
-            }
-            array[비교대상 + 1] = 정렬대상;
-        }
-    }
-    void 순서대로(){
+    @Override
+    public void 정답1() {
+        숫자정렬(x, y, z);
         System.out.print("큰 순서대로 나열 : ");
-        System.out.println(array[0] + "\t" + array[1] + "\t"
-                + array[2] + "\t");
-
+        System.out.println(첫 + "\t" + 둘 + "\t" + 셋 + "\t");
     }
-    void 두번째큰거(){
-        System.out.print("두번째 값 : ");
-        System.out.println(array[1]);
+
+    @Override
+    public void 정답2() {
+        System.out.println("가운데 값은 " + 중간값(x, y, z));
+    }
+
+    void 숫자정렬(int 첫, int 둘, int 셋){     //삽입정렬원리
+        int tmp;
+        if (첫 < 둘){
+            tmp = 첫;
+            첫 = 둘;
+            둘 = tmp;
+        }
+        if (둘 < 셋) {
+            tmp = 둘;
+            둘 = 셋;
+            셋 = tmp;
+            if (첫 < 둘){
+                tmp = 첫;
+                첫 = 둘;
+                둘 = tmp;
+            }
+        }
+        this.첫 = 첫;
+        this.둘 = 둘;
+        this.셋 = 셋;
+    }
+
+    int 중간값(int x, int y, int z){
+        중간값은 X, Y, Z;
+        
+        Z = new 중간값은(x, y, z);
+        X = new 중간값은(y, z, x);
+        Y = new 중간값은(z, x, y);
+        
+        중간값은 이거 = Z;
+        if (이거.get절대값() < X.get절대값()){
+            이거 = X;
+        }
+        if (이거.get절대값() < Y.get절대값()){
+            이거 = Y;
+        }
+        
+        return 이거.에요_중간값();
     }
 }
