@@ -12,11 +12,11 @@ public class 중간값은 {
         절대값 = Math.abs(y - z);
     }
 
-    public int 에요_중간값() {
+    int 에요_중간값() {
         return 중간값;
     }
 
-    public int get절대값(){
+    int get절대값(){
         return 절대값;
     }
 }
