@@ -8,14 +8,14 @@ public class 출력 {
     private int x, y, 합, 뺌, 곱, 나머지, 큰;
     private int 총가격 = 0;
 
-    public 출력(int 정식, int 갈비탕, int 비빔밥, int 총가격){
+    public void 음식설정(int 정식, int 갈비탕, int 비빔밥, int 총가격){
         this.정식 = 정식;
         this.갈비탕 = 갈비탕;
         this.비빔밥 = 비빔밥;
         this.총가격 = 총가격;
     }
 
-    public 출력(int x, int y, int 합, int 뺌, int 곱, int 나머지, int 큰){
+    public void 수설정(int x, int y, int 합, int 뺌, int 곱, int 나머지, int 큰){
         this.x = x;
         this.y = y;
         this.합 = 합;

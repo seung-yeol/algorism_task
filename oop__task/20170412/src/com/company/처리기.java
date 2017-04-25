@@ -7,11 +7,11 @@ public class 처리기 {
     private int 총가격;
     private int x, y;
 
-    public 처리기(int 정식, int 갈비탕, int 비빔밥){
+    public void 음식설정(int 정식, int 갈비탕, int 비빔밥){
         총가격 = 정식*9000 + 갈비탕*7000 + 비빔밥*6000;
     }
 
-    public 처리기(int x, int y){
+    public void 숫자설정(int x, int y){
         this.x = x;
         this.y = y;
     }

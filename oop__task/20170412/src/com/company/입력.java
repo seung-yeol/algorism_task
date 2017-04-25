@@ -13,11 +13,13 @@ public class 입력 {
     public 입력(){
         sc = new Scanner(System.in);
     }
+
     public void 메뉴입력(){
         정식 = sc.nextInt();
         갈비탕 = sc.nextInt();
         비빔밥 = sc.nextInt();
     }
+
     public void 숫자입력(){
         x = sc.nextInt();
         y = sc.nextInt();
