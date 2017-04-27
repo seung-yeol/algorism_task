@@ -19,7 +19,7 @@ public class 큰수찾기 extends 처리기 {
     }
 
     @Override
-    public void 출력() {
+    public void 정답출력() {
         System.out.println("가장 큰수는 : " + 큰수);
     }
 }

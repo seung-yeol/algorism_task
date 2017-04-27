@@ -15,7 +15,7 @@ public class 합처리 extends 처리기 {
     }
 
     @Override
-    public void 출력() {
+    public void 정답출력() {
         System.out.println("입력하신 값들의 합은 : " +합);
     }
 }
