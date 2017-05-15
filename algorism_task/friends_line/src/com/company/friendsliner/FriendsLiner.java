@@ -1,15 +1,25 @@
-package com.company;
+package com.company.friendsliner;
 
 /**
  * Created by Osy on 2017-05-15.
  */
-public class FriendsLine {
-    private final Person[] people;
-    private static final FriendsLine INSTANCE = new FriendsLine() ;
+public enum  FriendsLiner { //싱글톤 패턴을 사용하기위해 enum클래스 이용
+    INSTANCE(15);           //15명의 사람
 
-    private FriendsLine(){
-        people = new Person[15];
+    private final Person[] people;      //각각의 정점을 담기위한 사람?배열.
 
+    public static FriendsLiner getInstance(){
+        return INSTANCE;
+    }
+
+    FriendsLiner(int pNum){ //사람수 설정
+        people = new Person[pNum];
+
+        setPeople();
+        setFriendsLine();
+    }
+
+    private void setPeople(){   //사람 설정
         people[0] = new Person("김시작");
         people[1] = new Person("가우리");
         people[2] = new Person("나나바");
@@ -25,11 +35,13 @@ public class FriendsLine {
         people[12] = new Person("타우린");
         people[13] = new Person("파스칼");
         people[14] = new Person("하이디");
-
-        setFriendsLine();
+    }
+    private void setFriend(Person p1, Person p2, int closeness){
+        p1.friendSet(p2,closeness);     //p1의 친구목록에 p2추가
+        p2.friendSet(p1,closeness);     //p2의 친구목록에 p1추가
     }
 
-    private void setFriendsLine(){
+    private void setFriendsLine(){      //친구설정
         setFriend(people[0], people[4],7);
         setFriend(people[0], people[5],3);
         setFriend(people[0], people[7],5);
@@ -57,22 +69,13 @@ public class FriendsLine {
         setFriend(people[13], people[14],6);
     }
 
-    private void setFriend(Person p1, Person p2, int closeness){
-        p1.friendSet(p2,closeness);
-        p2.friendSet(p1,closeness);
-    }
-
     public Person[] getPeople(){
         return people;
     }
 
-    public void setFalse(){
+    public void setFalse(){                     //정점 경유 체크 해제
         for (Person p : people) {
             p.passFalse();
         }
-    }
-
-    public static FriendsLine getInstance(){
-        return INSTANCE;
     }
 }
