@@ -1,8 +1,6 @@
 package com.company.data_structure;
 
-import com.company.friend.Person;
-
-import java.util.ArrayList;
+import com.company.Person;
 
 /**
  * Created by Osy on 2017-05-14.

@@ -1,4 +1,4 @@
-package com.company.friend;
+package com.company;
 
 import java.util.ArrayList;
 
@@ -7,7 +7,6 @@ import java.util.ArrayList;
  */
 public class Person {
     private String name;
-    private int position;
     private boolean pass;
 
     ArrayList<Person> friends = new ArrayList();

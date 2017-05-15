@@ -1,8 +1,6 @@
 package com.company;
 
-import com.company.friend.Person;
 import com.company.data_structure.Queue;
-import com.company.data_structure.Stack;
 
 import java.util.ArrayList;
 
@@ -13,7 +11,6 @@ public class Searcher {
     ArrayList<Person> arr;
     Person[] people;
     Queue queue;
-    Stack stack;
 
     public Searcher(FriendsLine friendsLine){
         people = friendsLine.getPeople();
@@ -30,15 +27,11 @@ public class Searcher {
     }
 
     public void startDFS(int startNum){
-        stack = new Stack();
-
         System.out.println("BFS로 친구 탐색");
         System.out.print(people[startNum].getName());
 
         people[startNum].passTrue();
-        stack.push(people[startNum]);
         DFS(people[startNum]);
-
     }
 
     public void BFS(Person person){
@@ -67,8 +60,6 @@ public class Searcher {
                 System.out.print(" - " + p.getName());
                 p.passTrue();
                 DFS(p);
-            } else {
-
             }
         }
     }
