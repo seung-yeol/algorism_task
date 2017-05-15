@@ -15,7 +15,6 @@ public class Person {
 
     public Person(String name){
         this.name = name;
-        position = 0;
         pass = false;
     }
 

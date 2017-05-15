@@ -35,11 +35,14 @@ public class FriendsLine {
         setFriend(people[0], people[4],7);
         setFriend(people[0], people[5],3);
         setFriend(people[0], people[7],5);
+
         setFriend(people[1], people[2],2);
         setFriend(people[1], people[6],4);
         setFriend(people[1], people[7],9);
+
         setFriend(people[2], people[7],1);
         setFriend(people[2], people[11],4);
+
         setFriend(people[3], people[5],6);
         setFriend(people[3], people[10],8);
         setFriend(people[4], people[5],3);

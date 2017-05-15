@@ -10,6 +10,8 @@ public class Main {
         FriendsLine FL = FriendsLine.getInstance();
 
         Searcher searcher = new Searcher(FL);
-        searcher.startBFS(0);
+        //searcher.startBFS(0);
+
+        searcher.startDFS(0);
     }
 }

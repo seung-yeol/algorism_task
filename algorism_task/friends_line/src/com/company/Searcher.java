@@ -10,6 +10,7 @@ import java.util.ArrayList;
  * Created by Osy on 2017-05-14.
  */
 public class Searcher {
+    ArrayList<Person> arr;
     Person[] people;
     Queue queue;
     Stack stack;
@@ -35,18 +36,19 @@ public class Searcher {
         System.out.print(people[startNum].getName());
 
         people[startNum].passTrue();
+        stack.push(people[startNum]);
         DFS(people[startNum]);
 
     }
 
     public void BFS(Person person){
-        ArrayList<Person> arr = person.getFriends();
+        arr = person.getFriends();
 
-        for (Person h : arr){
-            if (h.getPass() == false){
-                System.out.print(" - " + h.getName());
-                h.passTrue();
-                queue.push(h);
+        for (Person p : arr){
+            if (p.getPass() == false){
+                System.out.print(" - " + p.getName());
+                p.passTrue();
+                queue.push(p);
             }
         }
 
@@ -58,16 +60,16 @@ public class Searcher {
         }
     }
     public void DFS(Person person){
-        ArrayList<Person> arr = person.getFriends();
+        arr = person.getFriends();
 
+        for (Person p : arr) {
+            if (p.getPass() == false) {
+                System.out.print(" - " + p.getName());
+                p.passTrue();
+                DFS(p);
+            } else {
 
-        try {
-            DFS(queue.pop());
-        }
-        catch (IndexOutOfBoundsException e){
-            return;
+            }
         }
     }
-
-
 }
