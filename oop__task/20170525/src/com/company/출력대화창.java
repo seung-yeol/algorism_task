@@ -34,20 +34,20 @@ public class 출력대화창 extends Dialog {
 
     private void 주문내역출력(){
         Label 주문내역 = new Label();
-            주문내역.setText(음식명 +" "+ 수량 + "개 주문!!");
-            주문내역.setBounds(40, 50, 130, 50);
+        주문내역.setText(음식명 +" "+ 수량 + "개 주문!!");
+        주문내역.setBounds(40, 50, 130, 50);
         add(주문내역);
     }
 
     private void 확인버튼(){
         Button 확인 = new Button("확인");
-            확인.addActionListener(new ActionListener() {
-                @Override
-                public void actionPerformed(ActionEvent e) {
-                    setVisible(false);
-                }
-            });
-            확인.setBounds(80, 100, 40,30);
+        확인.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                setVisible(false);
+            }
+        });
+        확인.setBounds(80, 100, 40,30);
         add(확인);
     }
 }

@@ -1,5 +1,6 @@
 package com.company;
 
+import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -9,19 +10,18 @@ import java.awt.event.WindowEvent;
 /**
  * Created by Osy on 2017-05-25.
  */
-public class 주_화면 extends Frame {
-    private final Frame f;
-
+public class 주_화면 extends JFrame {
     주_화면(String title){
         super(title);
-        f = this;
+        JFrame f = this;
+
         setSize(300, 200);
         setVisible(true);
         setLayout(null);
 
-        Button 주문버튼 = new Button("주문");
+        JButton 주문버튼 = new JButton("주문");
             주문버튼.setBounds(50,50,70,50);
-        Button 계산버튼 = new Button("계산");
+        JButton 계산버튼 = new JButton("계산");
             계산버튼.setBounds(175,50,70,50);
         add(주문버튼);
         add(계산버튼);
