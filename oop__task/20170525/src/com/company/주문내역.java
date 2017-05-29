@@ -1,10 +1,11 @@
 package com.company;
 
 import javax.swing.*;
+import java.awt.*;
 
 public class 주문내역 {
     private int x, y;
-    private int 가로, 세로, 라벨가로;
+    private int 가로,세로;
     private JLabel[] 라벨들;
     private String 음식명;
     private int 수량, 가격, 총금액;
@@ -19,31 +20,26 @@ public class 주문내역 {
     public void setBounds(int x, int y, int 가로, int 세로){
         this.x = x;
         this.y = y;
-        this.가로 = 가로;
+        this.가로 = 가로/column;
         this.세로 = 세로;
-        라벨가로 = 가로/column;
     }
 
     public void 라벨설정(String[] s){
         for (int i = 0 ; i < column; i++){
-            라벨들[i] = new JLabel();
+            라벨세부설정(i);
             라벨들[i].setText(s[i]);
-            라벨들[i].setBounds(x + (라벨가로*i), y, 라벨가로, 세로);
-            if (i != 0){    //우측정렬
-                라벨들[i].setHorizontalAlignment(SwingConstants.RIGHT);
-            }
-            System.out.print(라벨들[i].getText());
         }
     }
-
     public void 라벨설정(){
         for (int i = 0 ; i < column; i++){
-            라벨들[i] = new JLabel();
-            라벨들[i].setBounds(x + (라벨가로*i), y, 라벨가로, 세로);
-            if (i != 0){    //우측정렬
-                라벨들[i].setHorizontalAlignment(SwingConstants.RIGHT);
-            }
-            System.out.print(라벨들[i].getText());
+           라벨세부설정(i);
+        }
+    }
+    private void 라벨세부설정(int i){
+        라벨들[i] = new JLabel();
+        라벨들[i].setBounds(x + (가로*i), y, 가로, 세로);
+        if (i != 0){    //우측정렬
+            라벨들[i].setHorizontalAlignment(SwingConstants.RIGHT);
         }
     }
 
@@ -61,10 +57,6 @@ public class 주문내역 {
         라벨들[2].setText(Integer.toString(총금액));
     }
 
-    public JLabel[] 라벨얻기(){
-        return 라벨들;
-    }
-
     public String 음식명얻기(){
        return 음식명;
     }
@@ -79,16 +71,20 @@ public class 주문내역 {
         라벨들[1].setText(Integer.toString(수량));
         라벨들[2].setText(Integer.toString(총금액));
     }
-
     public void 수량감소(){
         수량--;
         총금액 = 수량 * 가격;
         수량변경();
     }
-
     public void 수량증가(){
         수량++;
         총금액 = 수량 * 가격;
         수량변경();
+    }
+
+    public void add(Dialog dialog){
+        for (JLabel j : 라벨들){
+            dialog.add(j);
+        }
     }
 }

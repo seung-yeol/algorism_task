@@ -79,7 +79,6 @@ public class 주문대화창 extends JDialog{
                 if (음식이름.equals(음식.음식명받기())) {
                     없니 = false;
                     주문.수량증가();
-                    System.out.print(주문.금액얻기());
                     break;
                 }
             }
@@ -97,7 +96,7 @@ public class 주문대화창 extends JDialog{
             목록.setBounds(버튼_가로, 버튼_세로*하단위치, 300, 20);
             목록.라벨설정(new String[]{"음 식 명","수 량","총 가 격"});
         rowCount++;
-        add(목록);
+        목록.add(this);
     }
 
     private void 추가주문(음식 음식){
@@ -107,17 +106,8 @@ public class 주문대화창 extends JDialog{
             목록.가격설정(음식.가격받기());
         rowCount++;
         주문내역들.add(목록);
-        add(목록);
+        목록.add(this);
         목록.라벨채우기(음식.음식명받기());
-        //System.out.println(목록.음식명얻기() + 목록.금액얻기());
-    }
-
-    public void add(주문내역 목록){
-        JLabel[] jl = 목록.라벨얻기();
-
-        for (JLabel j : jl){
-            add(j);
-        }
     }
 
     private void 완료취소버튼(){
