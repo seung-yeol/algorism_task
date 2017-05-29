@@ -9,6 +9,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.util.ArrayList;
 
 /**
  * Created by Osy on 2017-05-25.
@@ -21,17 +22,25 @@ public class 주문대화창 extends JDialog{
     private String 주문음식;
     private int 하단위치;
 
+    ArrayList<주문내역> rows;
+
     private final int 창크기_가로 = 800;
     private final int 창크기_세로 = 800;
     private final int 버튼_가로 = 창크기_가로/5;
     private final int 버튼_세로 = 창크기_세로/10;
 
+    private int rowCount;   //위치를 위한
+
 
     public 주문대화창(JFrame owner, String s) {
         super(owner, s);
         this.owner = owner;
+        rowCount = 0;
+
         setSize(창크기_가로,창크기_세로);
         setLayout(null);
+
+        rows = new ArrayList();
 
         메뉴판생성();
         선택음식();
@@ -61,33 +70,43 @@ public class 주문대화창 extends JDialog{
 
             buttons[i] = new JButton(btnStr);
                 buttons[i].setBounds(버튼_가로 * 행, 버튼_세로 * 열, 버튼_가로-20, 버튼_세로-20);
-                buttons[i].addActionListener(new ActionListener() {
-                    @Override
-                    public void actionPerformed(ActionEvent e) {
-                        //음식명.setText(e.getActionCommand());
-                        주문음식 = e.getActionCommand();
-
-                            /*for (int i = 0; i < 수; i++){
-                                if(model.getColumnName(i).equals(주문음식)){
-
-                                }
-                            }*/
-                    }
-                });
+                buttons[i].addActionListener(al);
             add(buttons[i]);
         }
     }
+
+
+
+    private ActionListener al = new ActionListener() {
+        public void actionPerformed(ActionEvent e) {
+            주문음식 = e.getActionCommand();
+            boolean 없니 = true;
+
+
+            for (주문내역 주문:rows){
+                String s = 주문.getFoodName().getText();
+                if (s.equals(주문음식)) {
+                    없니 = false;
+                    주문.plusAmount();
+                    break;
+                }
+            }
+
+            if (없니){
+                추가주문(주문음식);;
+            }
+        }
+    };
 
     private void 선택음식(){
 
     }
 
-    public void add(주문내역 t){
-        JLabel[] a = t.getRow();
+    public void add(주문내역 주문){
+        JLabel[] a = 주문.getRow();
 
-        for (int i = 0; i < a.length; i++){
-            JLabel jl = a[i];
-            add(jl);
+        for (JLabel j : a){
+            add(j);
         }
     }
 
@@ -95,8 +114,18 @@ public class 주문대화창 extends JDialog{
         하단위치 = 메뉴판.length/3+2;
 
         주문내역 목록 = new 주문내역(3);
-        목록.setBounds(버튼_가로, 버튼_세로*(하단위치), 300, 140);
-        목록.setRow(new String[]{"음식명","수량","총가격"});
+        목록.setBounds(버튼_가로, 버튼_세로*하단위치, 300, 20);
+        목록.setRow(new String[]{"음 식 명","수 량","총 가 격"});
+        rowCount++;
+        add(목록);
+    }
+
+    private void 추가주문(String 주문음식){
+        주문내역 목록 = new 주문내역(3);
+        목록.setBounds(버튼_가로, 버튼_세로*(하단위치)+20*rowCount, 300, 20);
+        목록.setRow(주문음식);
+        rowCount++;
+        rows.add(목록);
         add(목록);
     }
 
@@ -109,6 +138,7 @@ public class 주문대화창 extends JDialog{
                     setVisible(false);
                     /*String 수량 = 수량입력.getText();
                     new 출력대화창(owner, 주문음식 , 수량);*/
+
                 }
             });
         JButton 취소 = new JButton("취소");
@@ -117,13 +147,10 @@ public class 주문대화창 extends JDialog{
                 @Override
                 public void actionPerformed(ActionEvent e) {
                     setVisible(false);
-                        /*String 수량 = 수량입력.getText();
-                        new 출력대화창(owner, 주문음식 , 수량);*/
+
                 }
             });
         add(완료);
         add(취소);
     }
-
-
 }
