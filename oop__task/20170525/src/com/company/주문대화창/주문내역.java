@@ -1,4 +1,4 @@
-package com.company;
+package com.company.주문대화창;
 
 import javax.swing.*;
 import java.awt.*;

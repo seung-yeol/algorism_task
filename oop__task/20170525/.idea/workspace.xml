@@ -27,21 +27,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="주문대화창.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/company/주문대화창.java">
+      <file leaf-file-name="주문대화창.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/주문대화창/주문대화창.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="20" column="36" lean-forward="true" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
+            <state relative-caret-position="1368">
+              <caret line="178" column="18" lean-forward="false" selection-start-line="178" selection-start-column="18" selection-end-line="178" selection-end-column="18" />
               <folding>
                 <element signature="method#추가주문#0;class#주문대화창#0" expanded="false" />
                 <element signature="method#주문들변경#0;class#주문대화창#0" expanded="false" />
                 <element signature="method#완료취소버튼#0;class#주문대화창#0" expanded="false" />
                 <element signature="method#금액라벨생성#0;class#주문대화창#0" expanded="false" />
                 <element signature="method#금액라벨변경#0;class#주문대화창#0" expanded="false" />
-                <element signature="class#3342:3936" expanded="false" />
-                <element signature="class#3980:4700" expanded="false" />
-                <element signature="method#actionPerformed#0;class#3980:4700" expanded="false" />
-                <element signature="class#4743:5001" expanded="false" />
+                <element signature="class#3373:3967" expanded="false" />
+                <element signature="class#4011:4731" expanded="false" />
                 <element signature="class#차림표버튼#0;class#주문대화창#0" expanded="false" />
               </folding>
             </state>
@@ -49,10 +47,10 @@
         </entry>
       </file>
       <file leaf-file-name="주문내역.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/주문내역.java">
+        <entry file="file://$PROJECT_DIR$/src/com/company/주문대화창/주문내역.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="94">
-              <caret line="29" column="33" lean-forward="false" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="33" />
+            <state relative-caret-position="-1032">
+              <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#주문내역#0;class#주문내역#0" expanded="false" />
@@ -66,13 +64,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="주_화면.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="주_화면.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/주_화면.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="11" column="30" lean-forward="false" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+            <state relative-caret-position="244">
+              <caret line="74" column="27" lean-forward="true" selection-start-line="74" selection-start-column="27" selection-end-line="74" selection-end-column="27" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#3197#3198#0" expanded="true" />
+                <element signature="e#3232#3233#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -111,9 +110,11 @@
         <option value="$PROJECT_DIR$/src/com/company/주문테이블.java" />
         <option value="$PROJECT_DIR$/src/com/company/메뉴/메뉴판.java" />
         <option value="$PROJECT_DIR$/src/com/company/처리기.java" />
-        <option value="$PROJECT_DIR$/src/com/company/주_화면.java" />
         <option value="$PROJECT_DIR$/src/com/company/주문내역.java" />
         <option value="$PROJECT_DIR$/src/com/company/주문대화창.java" />
+        <option value="$PROJECT_DIR$/src/com/company/주문대화창/주문내역.java" />
+        <option value="$PROJECT_DIR$/src/com/company/주문대화창/주문대화창.java" />
+        <option value="$PROJECT_DIR$/src/com/company/주_화면.java" />
       </list>
     </option>
   </component>
@@ -191,6 +192,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="20170525" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="20170525" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="company" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="주문대화창" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -201,7 +224,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="project.propGUI" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Language Defaults" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -239,11 +262,11 @@
     <configuration default="false" name="주문내역" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="com.company.*" />
+          <option name="PATTERN" value="com.company.주문대화창.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="com.company.주문내역" />
+      <option name="MAIN_CLASS_NAME" value="com.company.주문대화창.주문내역" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" />
@@ -650,12 +673,12 @@
       <workItem from="1496052935695" duration="15200000" />
       <workItem from="1496072168572" duration="2000" />
       <workItem from="1496072216069" duration="5986000" />
-      <workItem from="1496149306211" duration="5977000" />
+      <workItem from="1496149306211" duration="12740000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76132000" />
+    <option name="totallyTimeSpent" value="82895000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -718,14 +741,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/company/메뉴/메뉴판.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/출력대화창.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
@@ -739,12 +754,13 @@
         <state relative-caret-position="168">
           <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#3197#3198#0" expanded="true" />
+            <element signature="e#3232#3233#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/주문대화창.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/주문대화창/주문대화창.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1992">
           <caret line="92" column="15" lean-forward="true" selection-start-line="92" selection-start-column="15" selection-end-line="92" selection-end-column="15" />
@@ -754,10 +770,8 @@
             <element signature="method#완료취소버튼#0;class#주문대화창#0" expanded="false" />
             <element signature="method#금액라벨생성#0;class#주문대화창#0" expanded="false" />
             <element signature="method#금액라벨변경#0;class#주문대화창#0" expanded="false" />
-            <element signature="class#3342:3936" expanded="false" />
-            <element signature="class#3980:4700" expanded="false" />
-            <element signature="method#actionPerformed#0;class#3980:4700" expanded="false" />
-            <element signature="class#4743:5001" expanded="false" />
+            <element signature="class#3373:3967" expanded="false" />
+            <element signature="class#4011:4731" expanded="false" />
             <element signature="class#차림표버튼#0;class#주문대화창#0" expanded="false" />
           </folding>
         </state>
@@ -792,12 +806,13 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#3197#3198#0" expanded="true" />
+            <element signature="e#3232#3233#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/주문대화창.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/주문대화창/주문대화창.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="624">
           <caret line="33" column="15" lean-forward="false" selection-start-line="33" selection-start-column="15" selection-end-line="33" selection-end-column="15" />
@@ -807,10 +822,8 @@
             <element signature="method#완료취소버튼#0;class#주문대화창#0" expanded="false" />
             <element signature="method#금액라벨생성#0;class#주문대화창#0" expanded="false" />
             <element signature="method#금액라벨변경#0;class#주문대화창#0" expanded="false" />
-            <element signature="class#3342:3936" expanded="false" />
-            <element signature="class#3980:4700" expanded="false" />
-            <element signature="method#actionPerformed#0;class#3980:4700" expanded="false" />
-            <element signature="class#4743:5001" expanded="false" />
+            <element signature="class#3373:3967" expanded="false" />
+            <element signature="class#4011:4731" expanded="false" />
             <element signature="class#차림표버튼#0;class#주문대화창#0" expanded="false" />
           </folding>
         </state>
@@ -845,12 +858,13 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#3197#3198#0" expanded="true" />
+            <element signature="e#3232#3233#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/주문대화창.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/주문대화창/주문대화창.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1896">
           <caret line="88" column="0" lean-forward="true" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
@@ -860,10 +874,8 @@
             <element signature="method#완료취소버튼#0;class#주문대화창#0" expanded="false" />
             <element signature="method#금액라벨생성#0;class#주문대화창#0" expanded="false" />
             <element signature="method#금액라벨변경#0;class#주문대화창#0" expanded="false" />
-            <element signature="class#3342:3936" expanded="false" />
-            <element signature="class#3980:4700" expanded="false" />
-            <element signature="method#actionPerformed#0;class#3980:4700" expanded="false" />
-            <element signature="class#4743:5001" expanded="false" />
+            <element signature="class#3373:3967" expanded="false" />
+            <element signature="class#4011:4731" expanded="false" />
             <element signature="class#차림표버튼#0;class#주문대화창#0" expanded="false" />
           </folding>
         </state>
@@ -899,7 +911,8 @@
         <state relative-caret-position="96">
           <caret line="4" column="4" lean-forward="false" selection-start-line="4" selection-start-column="4" selection-end-line="6" selection-end-column="5" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#3197#3198#0" expanded="true" />
+            <element signature="e#3232#3233#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -913,7 +926,6 @@
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/src.zip!/javax/swing/JList.java" />
     <entry file="file://$PROJECT_DIR$/src/com/company/리스트뷰.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/src.zip!/java/awt/Component.java" />
     <entry file="file://$PROJECT_DIR$/src/com/company/대화창데모.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/src.zip!/javax/swing/JDialog.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/src.zip!/java/awt/event/WindowFocusListener.java">
@@ -1045,29 +1057,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/src.zip!/java/awt/Window.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="147" column="13" lean-forward="false" selection-start-line="147" selection-start-column="13" selection-end-line="147" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/src.zip!/java/awt/Dialog.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
           <caret line="96" column="30" lean-forward="false" selection-start-line="96" selection-start-column="30" selection-end-line="96" selection-end-column="30" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/주_화면.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="11" column="30" lean-forward="false" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1095,10 +1089,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/주문내역.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/src.zip!/java/lang/Object.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="94">
-          <caret line="29" column="33" lean-forward="false" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="33" />
+        <state relative-caret-position="202">
+          <caret line="147" column="19" lean-forward="false" selection-start-line="147" selection-start-column="19" selection-end-line="147" selection-end-column="19" />
+          <folding>
+            <element signature="e#5748#5749#0" expanded="false" />
+            <element signature="e#5784#5785#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/src.zip!/java/awt/Component.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="208" column="24" lean-forward="true" selection-start-line="208" selection-start-column="24" selection-end-line="208" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/src.zip!/java/awt/Window.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="1456" column="27" lean-forward="false" selection-start-line="1456" selection-start-column="27" selection-end-line="1456" selection-end-column="27" />
+          <folding>
+            <element signature="e#52127#52128#0" expanded="false" />
+            <element signature="e#52173#52174#0" expanded="false" />
+            <element signature="e#52216#52217#0" expanded="false" />
+            <element signature="e#52253#52254#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/주문대화창/주문내역.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1032">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#주문내역#0;class#주문내역#0" expanded="false" />
@@ -1111,21 +1137,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/주문대화창.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/주문대화창/주문대화창.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="20" column="36" lean-forward="true" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
+        <state relative-caret-position="1368">
+          <caret line="178" column="18" lean-forward="false" selection-start-line="178" selection-start-column="18" selection-end-line="178" selection-end-column="18" />
           <folding>
             <element signature="method#추가주문#0;class#주문대화창#0" expanded="false" />
             <element signature="method#주문들변경#0;class#주문대화창#0" expanded="false" />
             <element signature="method#완료취소버튼#0;class#주문대화창#0" expanded="false" />
             <element signature="method#금액라벨생성#0;class#주문대화창#0" expanded="false" />
             <element signature="method#금액라벨변경#0;class#주문대화창#0" expanded="false" />
-            <element signature="class#3342:3936" expanded="false" />
-            <element signature="class#3980:4700" expanded="false" />
-            <element signature="method#actionPerformed#0;class#3980:4700" expanded="false" />
-            <element signature="class#4743:5001" expanded="false" />
+            <element signature="class#3373:3967" expanded="false" />
+            <element signature="class#4011:4731" expanded="false" />
             <element signature="class#차림표버튼#0;class#주문대화창#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/주_화면.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="74" column="27" lean-forward="true" selection-start-line="74" selection-start-column="27" selection-end-line="74" selection-end-column="27" />
+          <folding>
+            <element signature="e#3197#3198#0" expanded="true" />
+            <element signature="e#3232#3233#0" expanded="true" />
           </folding>
         </state>
       </provider>

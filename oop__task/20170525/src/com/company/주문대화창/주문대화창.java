@@ -1,7 +1,8 @@
-package com.company;
+package com.company.주문대화창;
 
 import com.company.메뉴.메뉴판;
 import com.company.메뉴.음식;
+import com.company.주_화면;
 
 import javax.swing.*;
 import java.awt.event.*;
@@ -174,6 +175,9 @@ public class 주문대화창 extends JDialog{
         @Override
         public void actionPerformed(ActionEvent e) {
             if (e.getActionCommand().equals("완료")){
+                주_화면 주 = (주_화면)getParent();
+                //주_화면 주 = (주_화면)getOwner();
+                주.정보얻기(주문내역들);
                 dispose();
             }
             else {
