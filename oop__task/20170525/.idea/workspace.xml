@@ -30,35 +30,14 @@
       <file leaf-file-name="주문대화창.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/주문대화창/주문대화창.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1368">
-              <caret line="178" column="18" lean-forward="false" selection-start-line="178" selection-start-column="18" selection-end-line="178" selection-end-column="18" />
+            <state relative-caret-position="455">
+              <caret line="128" column="21" lean-forward="true" selection-start-line="128" selection-start-column="21" selection-end-line="128" selection-end-column="21" />
               <folding>
-                <element signature="method#추가주문#0;class#주문대화창#0" expanded="false" />
+                <element signature="method#메뉴판생성#0;class#주문대화창#0" expanded="false" />
                 <element signature="method#주문들변경#0;class#주문대화창#0" expanded="false" />
                 <element signature="method#완료취소버튼#0;class#주문대화창#0" expanded="false" />
-                <element signature="method#금액라벨생성#0;class#주문대화창#0" expanded="false" />
-                <element signature="method#금액라벨변경#0;class#주문대화창#0" expanded="false" />
-                <element signature="class#3373:3967" expanded="false" />
-                <element signature="class#4011:4731" expanded="false" />
-                <element signature="class#차림표버튼#0;class#주문대화창#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="주문내역.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/주문대화창/주문내역.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1032">
-              <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#주문내역#0;class#주문내역#0" expanded="false" />
-                <element signature="method#가격설정#0;class#주문내역#0" expanded="false" />
-                <element signature="method#라벨채우기#0;class#주문내역#0" expanded="false" />
-                <element signature="method#수량변경#0;class#주문내역#0" expanded="false" />
-                <element signature="method#수량감소#0;class#주문내역#0" expanded="false" />
-                <element signature="method#수량증가#0;class#주문내역#0" expanded="false" />
+                <element signature="class#3668:4262" expanded="false" />
+                <element signature="class#4306:5026" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -67,11 +46,21 @@
       <file leaf-file-name="주_화면.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/주_화면.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
-              <caret line="74" column="27" lean-forward="true" selection-start-line="74" selection-start-column="27" selection-end-line="74" selection-end-column="27" />
+            <state relative-caret-position="815">
+              <caret line="87" column="0" lean-forward="true" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
               <folding>
-                <element signature="e#3197#3198#0" expanded="true" />
-                <element signature="e#3232#3233#0" expanded="true" />
+                <element signature="method#좌석생성#0;class#주_화면#0" expanded="false" />
+                <element signature="method#주문내역얻기#0;class#주_화면#0" expanded="false" />
+                <element signature="class#2189:2862" expanded="false" />
+                <element signature="class#2903:3285" expanded="false" />
+                <element signature="method#actionPerformed#0;class#2903:3285" expanded="false" />
+                <element signature="class#좌석버튼#0;class#주_화면#0" expanded="false" />
+                <element signature="e#3390#3391#0" expanded="true" />
+                <element signature="e#3422#3423#0" expanded="true" />
+                <element signature="e#3477#3478#0" expanded="true" />
+                <element signature="e#3519#3520#0" expanded="true" />
+                <element signature="e#3558#3559#0" expanded="true" />
+                <element signature="e#3594#3595#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -673,12 +662,12 @@
       <workItem from="1496052935695" duration="15200000" />
       <workItem from="1496072168572" duration="2000" />
       <workItem from="1496072216069" duration="5986000" />
-      <workItem from="1496149306211" duration="12740000" />
+      <workItem from="1496149306211" duration="15025000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="82895000" />
+    <option name="totallyTimeSpent" value="85180000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -741,21 +730,23 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/company/출력대화창.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/주_화면.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
           <folding>
-            <element signature="e#3197#3198#0" expanded="true" />
-            <element signature="e#3232#3233#0" expanded="true" />
+            <element signature="method#좌석생성#0;class#주_화면#0" expanded="false" />
+            <element signature="method#주문내역얻기#0;class#주_화면#0" expanded="false" />
+            <element signature="class#2189:2862" expanded="false" />
+            <element signature="class#2903:3285" expanded="false" />
+            <element signature="method#actionPerformed#0;class#2903:3285" expanded="false" />
+            <element signature="class#좌석버튼#0;class#주_화면#0" expanded="false" />
+            <element signature="e#3390#3391#0" expanded="true" />
+            <element signature="e#3422#3423#0" expanded="true" />
+            <element signature="e#3477#3478#0" expanded="true" />
+            <element signature="e#3519#3520#0" expanded="true" />
+            <element signature="e#3558#3559#0" expanded="true" />
+            <element signature="e#3594#3595#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -765,14 +756,11 @@
         <state relative-caret-position="1992">
           <caret line="92" column="15" lean-forward="true" selection-start-line="92" selection-start-column="15" selection-end-line="92" selection-end-column="15" />
           <folding>
-            <element signature="method#추가주문#0;class#주문대화창#0" expanded="false" />
+            <element signature="method#메뉴판생성#0;class#주문대화창#0" expanded="false" />
             <element signature="method#주문들변경#0;class#주문대화창#0" expanded="false" />
             <element signature="method#완료취소버튼#0;class#주문대화창#0" expanded="false" />
-            <element signature="method#금액라벨생성#0;class#주문대화창#0" expanded="false" />
-            <element signature="method#금액라벨변경#0;class#주문대화창#0" expanded="false" />
-            <element signature="class#3373:3967" expanded="false" />
-            <element signature="class#4011:4731" expanded="false" />
-            <element signature="class#차림표버튼#0;class#주문대화창#0" expanded="false" />
+            <element signature="class#3668:4262" expanded="false" />
+            <element signature="class#4306:5026" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -806,8 +794,18 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#3197#3198#0" expanded="true" />
-            <element signature="e#3232#3233#0" expanded="true" />
+            <element signature="method#좌석생성#0;class#주_화면#0" expanded="false" />
+            <element signature="method#주문내역얻기#0;class#주_화면#0" expanded="false" />
+            <element signature="class#2189:2862" expanded="false" />
+            <element signature="class#2903:3285" expanded="false" />
+            <element signature="method#actionPerformed#0;class#2903:3285" expanded="false" />
+            <element signature="class#좌석버튼#0;class#주_화면#0" expanded="false" />
+            <element signature="e#3390#3391#0" expanded="true" />
+            <element signature="e#3422#3423#0" expanded="true" />
+            <element signature="e#3477#3478#0" expanded="true" />
+            <element signature="e#3519#3520#0" expanded="true" />
+            <element signature="e#3558#3559#0" expanded="true" />
+            <element signature="e#3594#3595#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -817,14 +815,11 @@
         <state relative-caret-position="624">
           <caret line="33" column="15" lean-forward="false" selection-start-line="33" selection-start-column="15" selection-end-line="33" selection-end-column="15" />
           <folding>
-            <element signature="method#추가주문#0;class#주문대화창#0" expanded="false" />
+            <element signature="method#메뉴판생성#0;class#주문대화창#0" expanded="false" />
             <element signature="method#주문들변경#0;class#주문대화창#0" expanded="false" />
             <element signature="method#완료취소버튼#0;class#주문대화창#0" expanded="false" />
-            <element signature="method#금액라벨생성#0;class#주문대화창#0" expanded="false" />
-            <element signature="method#금액라벨변경#0;class#주문대화창#0" expanded="false" />
-            <element signature="class#3373:3967" expanded="false" />
-            <element signature="class#4011:4731" expanded="false" />
-            <element signature="class#차림표버튼#0;class#주문대화창#0" expanded="false" />
+            <element signature="class#3668:4262" expanded="false" />
+            <element signature="class#4306:5026" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -858,8 +853,18 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#3197#3198#0" expanded="true" />
-            <element signature="e#3232#3233#0" expanded="true" />
+            <element signature="method#좌석생성#0;class#주_화면#0" expanded="false" />
+            <element signature="method#주문내역얻기#0;class#주_화면#0" expanded="false" />
+            <element signature="class#2189:2862" expanded="false" />
+            <element signature="class#2903:3285" expanded="false" />
+            <element signature="method#actionPerformed#0;class#2903:3285" expanded="false" />
+            <element signature="class#좌석버튼#0;class#주_화면#0" expanded="false" />
+            <element signature="e#3390#3391#0" expanded="true" />
+            <element signature="e#3422#3423#0" expanded="true" />
+            <element signature="e#3477#3478#0" expanded="true" />
+            <element signature="e#3519#3520#0" expanded="true" />
+            <element signature="e#3558#3559#0" expanded="true" />
+            <element signature="e#3594#3595#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -869,14 +874,11 @@
         <state relative-caret-position="1896">
           <caret line="88" column="0" lean-forward="true" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
           <folding>
-            <element signature="method#추가주문#0;class#주문대화창#0" expanded="false" />
+            <element signature="method#메뉴판생성#0;class#주문대화창#0" expanded="false" />
             <element signature="method#주문들변경#0;class#주문대화창#0" expanded="false" />
             <element signature="method#완료취소버튼#0;class#주문대화창#0" expanded="false" />
-            <element signature="method#금액라벨생성#0;class#주문대화창#0" expanded="false" />
-            <element signature="method#금액라벨변경#0;class#주문대화창#0" expanded="false" />
-            <element signature="class#3373:3967" expanded="false" />
-            <element signature="class#4011:4731" expanded="false" />
-            <element signature="class#차림표버튼#0;class#주문대화창#0" expanded="false" />
+            <element signature="class#3668:4262" expanded="false" />
+            <element signature="class#4306:5026" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -911,8 +913,18 @@
         <state relative-caret-position="96">
           <caret line="4" column="4" lean-forward="false" selection-start-line="4" selection-start-column="4" selection-end-line="6" selection-end-column="5" />
           <folding>
-            <element signature="e#3197#3198#0" expanded="true" />
-            <element signature="e#3232#3233#0" expanded="true" />
+            <element signature="method#좌석생성#0;class#주_화면#0" expanded="false" />
+            <element signature="method#주문내역얻기#0;class#주_화면#0" expanded="false" />
+            <element signature="class#2189:2862" expanded="false" />
+            <element signature="class#2903:3285" expanded="false" />
+            <element signature="method#actionPerformed#0;class#2903:3285" expanded="false" />
+            <element signature="class#좌석버튼#0;class#주_화면#0" expanded="false" />
+            <element signature="e#3390#3391#0" expanded="true" />
+            <element signature="e#3422#3423#0" expanded="true" />
+            <element signature="e#3477#3478#0" expanded="true" />
+            <element signature="e#3519#3520#0" expanded="true" />
+            <element signature="e#3558#3559#0" expanded="true" />
+            <element signature="e#3594#3595#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1123,7 +1135,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/주문대화창/주문내역.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1032">
+        <state relative-caret-position="-1009">
           <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1137,30 +1149,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/src.zip!/javax/swing/plaf/basic/BasicButtonListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="251" column="0" lean-forward="false" selection-start-line="251" selection-start-column="0" selection-end-line="251" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/주문대화창/주문대화창.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1368">
-          <caret line="178" column="18" lean-forward="false" selection-start-line="178" selection-start-column="18" selection-end-line="178" selection-end-column="18" />
+        <state relative-caret-position="455">
+          <caret line="128" column="21" lean-forward="true" selection-start-line="128" selection-start-column="21" selection-end-line="128" selection-end-column="21" />
           <folding>
-            <element signature="method#추가주문#0;class#주문대화창#0" expanded="false" />
+            <element signature="method#메뉴판생성#0;class#주문대화창#0" expanded="false" />
             <element signature="method#주문들변경#0;class#주문대화창#0" expanded="false" />
             <element signature="method#완료취소버튼#0;class#주문대화창#0" expanded="false" />
-            <element signature="method#금액라벨생성#0;class#주문대화창#0" expanded="false" />
-            <element signature="method#금액라벨변경#0;class#주문대화창#0" expanded="false" />
-            <element signature="class#3373:3967" expanded="false" />
-            <element signature="class#4011:4731" expanded="false" />
-            <element signature="class#차림표버튼#0;class#주문대화창#0" expanded="false" />
+            <element signature="class#3668:4262" expanded="false" />
+            <element signature="class#4306:5026" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/주_화면.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="74" column="27" lean-forward="true" selection-start-line="74" selection-start-column="27" selection-end-line="74" selection-end-column="27" />
+        <state relative-caret-position="815">
+          <caret line="87" column="0" lean-forward="true" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
           <folding>
-            <element signature="e#3197#3198#0" expanded="true" />
-            <element signature="e#3232#3233#0" expanded="true" />
+            <element signature="method#좌석생성#0;class#주_화면#0" expanded="false" />
+            <element signature="method#주문내역얻기#0;class#주_화면#0" expanded="false" />
+            <element signature="class#2189:2862" expanded="false" />
+            <element signature="class#2903:3285" expanded="false" />
+            <element signature="method#actionPerformed#0;class#2903:3285" expanded="false" />
+            <element signature="class#좌석버튼#0;class#주_화면#0" expanded="false" />
+            <element signature="e#3390#3391#0" expanded="true" />
+            <element signature="e#3422#3423#0" expanded="true" />
+            <element signature="e#3477#3478#0" expanded="true" />
+            <element signature="e#3519#3520#0" expanded="true" />
+            <element signature="e#3558#3559#0" expanded="true" />
+            <element signature="e#3594#3595#0" expanded="true" />
           </folding>
         </state>
       </provider>

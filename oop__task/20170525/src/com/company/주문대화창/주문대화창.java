@@ -23,16 +23,24 @@ public class 주문대화창 extends JDialog{
     private JLabel 금액라벨;
     private ArrayList<주문내역> 주문내역들;
 
-    public 주문대화창(JFrame owner, String s) {
+    public 주문대화창(JFrame owner, String s, ArrayList 주문내역들) {
         super(owner, s);
-        rowCount = 1;
-        주문내역들 = new ArrayList();
+
+        if (주문내역들 != null){
+            this.주문내역들 = 주문내역들;
+            rowCount = 주문내역들.size()+1;
+        }
+        else {
+            this.주문내역들 = new ArrayList();
+            rowCount = 1;
+        }
 
         setSize(창크기_가로,창크기_세로);
         setLayout(null);
 
         메뉴판생성();
         주문테이블();
+        원주문();
         완료취소버튼();
         금액라벨생성();
 
@@ -78,6 +86,11 @@ public class 주문대화창 extends JDialog{
             목록.라벨설정(new String[]{"음 식 명","수 량","가 격"});
         목록.add(THIS);
     }
+    private void 원주문(){
+        for (주문내역 목록 : 주문내역들){
+            목록.add(THIS);
+        }
+    }
     private void 추가주문(음식 음식){
         주문내역 목록 = new 주문내역();
             목록.setBounds(버튼_가로, 버튼_세로*(하단위치)+20*rowCount, 300, 20);
@@ -110,6 +123,7 @@ public class 주문대화창 extends JDialog{
         금액라벨.setHorizontalAlignment(SwingConstants.RIGHT);
         금액라벨.setBounds(버튼_가로, 버튼_세로*(하단위치)+20*(rowCount), 300, 20);
         add(금액라벨);
+        금액라벨변경();
     }
     private void 금액라벨변경(){
         int 총금액 = 0 ;
@@ -177,7 +191,7 @@ public class 주문대화창 extends JDialog{
             if (e.getActionCommand().equals("완료")){
                 주_화면 주 = (주_화면)getParent();
                 //주_화면 주 = (주_화면)getOwner();
-                주.정보얻기(주문내역들);
+                주.주문내역얻기(주문내역들);
                 dispose();
             }
             else {
@@ -185,6 +199,10 @@ public class 주문대화창 extends JDialog{
             }
         }
     };
+    public void 주문내역받기(ArrayList<주문내역> 주문내역들){
+        this.주문내역들 = 주문내역들;
+
+    }
 
     private class 차림표버튼 extends JButton{
         private 음식 음식;
@@ -192,11 +210,11 @@ public class 주문대화창 extends JDialog{
             super(s);
         }
 
-        public void 음식설정(음식 음식) {
+        private void 음식설정(음식 음식) {
             this.음식 = 음식;
         }
 
-        public 음식 음식얻기(){
+        private 음식 음식얻기(){
             return 음식;
         }
     }
