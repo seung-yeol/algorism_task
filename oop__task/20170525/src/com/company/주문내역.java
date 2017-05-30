@@ -23,6 +23,14 @@ public class 주문내역 {
         this.가로 = 가로/column;
         this.세로 = 세로;
     }
+    public void setLocation(int x, int y){
+        this.x = x;
+        this.y = y;
+        for (int i = 0; i < column ; i++){
+            라벨들[i].setLocation(x + (가로*i), y);
+        }
+
+    }
 
     public void 라벨설정(String[] s){
         for (int i = 0 ; i < column; i++){
@@ -85,6 +93,11 @@ public class 주문내역 {
     public void add(Dialog dialog){
         for (JLabel j : 라벨들){
             dialog.add(j);
+        }
+    }
+    public void remove(Dialog dialog){
+        for (JLabel j : 라벨들){
+            dialog.remove(j);
         }
     }
 }
