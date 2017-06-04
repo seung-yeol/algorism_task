@@ -1,4 +1,4 @@
-package com.company.주문대화창;
+package com.company.다이얼로그;
 
 import com.company.메뉴.메뉴판;
 import com.company.메뉴.음식;
@@ -23,8 +23,8 @@ public class 주문대화창 extends JDialog{
     private JLabel 금액라벨;
     private ArrayList<주문내역> 주문내역들;
 
-    public 주문대화창(JFrame owner, String s, ArrayList 주문내역들) {
-        super(owner, s);
+    public 주문대화창(JFrame owner, String title, ArrayList 주문내역들) {
+        super(owner, title);
 
         if (주문내역들 != null){
             this.주문내역들 = 주문내역들;
@@ -191,7 +191,7 @@ public class 주문대화창 extends JDialog{
             if (e.getActionCommand().equals("완료")){
                 주_화면 주 = (주_화면)getParent();
                 //주_화면 주 = (주_화면)getOwner();
-                주.주문내역얻기(주문내역들);
+                주.주문내역설정(주문내역들);
                 dispose();
             }
             else {
@@ -199,9 +199,9 @@ public class 주문대화창 extends JDialog{
             }
         }
     };
+
     public void 주문내역받기(ArrayList<주문내역> 주문내역들){
         this.주문내역들 = 주문내역들;
-
     }
 
     private class 차림표버튼 extends JButton{

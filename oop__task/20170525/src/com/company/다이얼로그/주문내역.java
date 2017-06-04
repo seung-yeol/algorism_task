@@ -1,4 +1,4 @@
-package com.company.주문대화창;
+package com.company.다이얼로그;
 
 import javax.swing.*;
 import java.awt.*;
@@ -56,8 +56,6 @@ public class 주문내역 {
         총금액 = 수량 * 가격;
     }
 
-    //add이후 setText해야 폼에 글씨가 바로생김 왜그런지는 잘..;
-    //그전에는 창을 늘리거나 키워야 생김
     public void 라벨채우기(String 음식명) {
         this.음식명 = 음식명;
         라벨들[0].setText(음식명);
