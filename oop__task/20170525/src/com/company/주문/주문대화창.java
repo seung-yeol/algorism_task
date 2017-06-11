@@ -1,4 +1,4 @@
-package com.company.다이얼로그;
+package com.company.주문;
 
 import com.company.메뉴.메뉴판;
 import com.company.메뉴.음식;
@@ -22,24 +22,24 @@ public class 주문대화창 extends JDialog{
     private int rowCount;   //위치를 위한
     private JLabel 금액라벨;
     private ArrayList<주문내역> 주문내역들;
+    private ArrayList<주문라벨> 주문라벨들;
 
     public 주문대화창(JFrame owner, String title, ArrayList 주문내역들) {
         super(owner, title);
-
         if (주문내역들 != null){
             this.주문내역들 = 주문내역들;
-            rowCount = 주문내역들.size()+1;
         }
         else {
             this.주문내역들 = new ArrayList();
-            rowCount = 1;
         }
+        주문라벨들 = new ArrayList();
+        rowCount = 1;
 
         setSize(창크기_가로,창크기_세로);
         setLayout(null);
 
         메뉴판생성();
-        주문테이블();
+        주문라벨생성();
         원주문();
         완료취소버튼();
         금액라벨생성();
@@ -80,30 +80,40 @@ public class 주문대화창 extends JDialog{
         }
     }
 
-    private void 주문테이블(){
-        주문내역 목록 = new 주문내역();
-            목록.setBounds(버튼_가로, 버튼_세로*하단위치, 300, 20);
-            목록.라벨설정(new String[]{"음 식 명","수 량","가 격"});
-        목록.add(THIS);
+    private void 주문라벨생성(){
+        주문라벨 주문라벨 = new 주문라벨();
+            주문라벨.setBounds(버튼_가로, 버튼_세로*하단위치, 300, 20);
+            주문라벨.라벨채우기(new String[]{"음 식 명","수 량","가 격"});
+        주문라벨.라벨들붙이기();
     }
     private void 원주문(){
-        for (주문내역 목록 : 주문내역들){
-            목록.add(THIS);
+        if (주문내역들.isEmpty() == false){
+            for (주문내역 주문내역 : 주문내역들){
+                주문라벨 주문라벨 = new 주문라벨(주문내역);
+                주문라벨.setBounds(버튼_가로, 버튼_세로*(하단위치)+20*rowCount, 300, 20);
+                주문라벨.라벨채우기();
+                주문라벨.라벨들붙이기();
+
+                rowCount++;
+                주문라벨들.add(주문라벨);
+            }
         }
     }
     private void 추가주문(음식 음식){
-        주문내역 목록 = new 주문내역();
-            목록.setBounds(버튼_가로, 버튼_세로*(하단위치)+20*rowCount, 300, 20);
-            목록.라벨설정();
-            목록.가격설정(음식.가격받기());
+        주문내역 주문내역 = new 주문내역(음식);
+        주문내역들.add(주문내역);
+
+        주문라벨 주문라벨 = new 주문라벨(주문내역);
+            주문라벨.setBounds(버튼_가로, 버튼_세로*(하단위치)+20*rowCount, 300, 20);
+            주문라벨.라벨채우기();
+            주문라벨.라벨들붙이기();
+        주문라벨들.add(주문라벨);
+
         rowCount++;
-        주문내역들.add(목록);
-        목록.add(THIS);
-        목록.라벨채우기(음식.음식명받기());
     }
     private void 주문들변경(){
         for (int i = 0 ; i < 주문내역들.size(); i++){
-            주문내역들.get(i).setLocation(버튼_가로, 버튼_세로*(하단위치)+20*(i+1));
+            주문라벨들.get(i).setLocation(버튼_가로, 버튼_세로*(하단위치)+20*(i+1));
         }
     }
 
@@ -129,7 +139,7 @@ public class 주문대화창 extends JDialog{
         int 총금액 = 0 ;
 
         for (주문내역 주문내역:주문내역들){
-            총금액 += 주문내역.금액얻기();
+            총금액 += 주문내역.총금액얻기();
         }
         금액라벨.setLocation(버튼_가로, 버튼_세로*(하단위치)+20*(rowCount));
         금액라벨.setText(Integer.toString(총금액));
@@ -137,20 +147,23 @@ public class 주문대화창 extends JDialog{
 
     private ActionListener 차림표증가리스너 = new ActionListener() {
         public void actionPerformed(ActionEvent e) {
+            e.getActionCommand();
             차림표버튼 클릭버튼 = (차림표버튼)e.getSource();
             음식 음식 = 클릭버튼.음식얻기();
             boolean 없니 = true;
 
             //주문내역에 있다면 수량증가.
-            for (주문내역 주문 : 주문내역들){
-                String 음식이름 = 주문.음식명얻기();
+            for (주문라벨 주문라벨 : 주문라벨들){
+                String 음식이름 = 주문라벨.주문내역.음식명얻기();
 
                 if (음식이름.equals(음식.음식명받기())) {
                     없니 = false;
-                    주문.수량증가();
+                    주문라벨.주문내역.수량증가();
+                    주문라벨.수량변경();
                     break;
                 }
             }
+
             //주문내역에 추가된게 없으면 라벨생성.
             if (없니){
                 추가주문(음식);
@@ -163,19 +176,21 @@ public class 주문대화창 extends JDialog{
         public void actionPerformed(ActionEvent e) {
             차림표버튼 클릭버튼 = (차림표버튼)e.getSource();
             음식 음식 = 클릭버튼.음식얻기();
-            boolean 없니 = true;
 
             //주문내역에 있다면 수량증가.
-            for (주문내역 주문 : 주문내역들){
-                String 음식이름 = 주문.음식명얻기();
+            for (주문라벨 주문라벨 : 주문라벨들){
+                String 음식이름 = 주문라벨.주문내역.음식명얻기();
 
                 if (음식이름.equals(음식.음식명받기())) {
-                    없니 = false;
-                    주문.수량감소();
-                    if (주문.수량얻기() == 0){
-                        주문.remove(THIS);
-                        주문내역들.remove(주문);
 
+                    주문라벨.주문내역.수량감소();
+                    주문라벨.수량변경();
+
+                    if (주문라벨.주문내역.수량얻기() == 0){
+                        주문라벨.라벨들삭제();
+
+                        주문내역들.remove(주문라벨.주문내역);
+                        주문라벨들.remove(주문라벨);
                         rowCount--;
                     }
                     break;
@@ -190,7 +205,6 @@ public class 주문대화창 extends JDialog{
         public void actionPerformed(ActionEvent e) {
             if (e.getActionCommand().equals("완료")){
                 주_화면 주 = (주_화면)getParent();
-                //주_화면 주 = (주_화면)getOwner();
                 주.주문내역설정(주문내역들);
                 dispose();
             }
@@ -199,10 +213,6 @@ public class 주문대화창 extends JDialog{
             }
         }
     };
-
-    public void 주문내역받기(ArrayList<주문내역> 주문내역들){
-        this.주문내역들 = 주문내역들;
-    }
 
     private class 차림표버튼 extends JButton{
         private 음식 음식;
@@ -216,6 +226,77 @@ public class 주문대화창 extends JDialog{
 
         private 음식 음식얻기(){
             return 음식;
+        }
+    }
+
+    private class 주문라벨{
+        private final int column = 3;
+
+        private int 가로;
+        private 주문내역 주문내역;
+        private JLabel[] 라벨들;
+
+        private 주문라벨() {
+            라벨들 = new JLabel[column];
+
+            for (int i = 0; i < column ; i++){
+                라벨들[i] = new JLabel();
+            }
+        }
+        private 주문라벨(주문내역 주문내역){
+            라벨들 = new JLabel[column];
+            this.주문내역 = 주문내역;
+
+            for (int i = 0; i < column ; i++){
+                라벨들[i] = new JLabel();
+            }
+        }
+
+        private void setBounds(int x, int y, int 가로, int 세로){
+            this.가로 = 가로/column;
+
+            for (int i = 0 ; i < column; i++){
+                라벨들[i].setBounds(x + (this.가로*i), y, this.가로, 세로);
+                if (i != 0){    //우측정렬
+                    라벨들[i].setHorizontalAlignment(SwingConstants.RIGHT);
+                }
+            }
+        }
+        private void setLocation(int x, int y){
+            for (int i = 0; i < column ; i++){
+                라벨들[i].setLocation(x + (가로*i), y);
+            }
+        }
+
+        /*private void 주문내역채우기(String 음식명, int 가격){
+            주문내역.음식명설정(음식명);
+            주문내역.가격설정(가격);
+        }*/
+        private void 라벨채우기(String[] s){
+            for (int i = 0 ; i < column; i++){
+                라벨들[i].setText(s[i]);
+            }
+        }
+        private void 라벨채우기() {
+            라벨들[0].setText(주문내역.음식명얻기());
+            라벨들[1].setText(Integer.toString(주문내역.수량얻기()));
+            라벨들[2].setText(Integer.toString(주문내역.총금액얻기()));
+        }
+
+        private void 수량변경(){
+            라벨들[1].setText(Integer.toString(주문내역.수량얻기()));
+            라벨들[2].setText(Integer.toString(주문내역.총금액얻기()));
+        }
+
+        private void 라벨들붙이기(){
+            for (JLabel j : 라벨들){
+                THIS.add(j);
+            }
+        }
+        private void 라벨들삭제(){
+            for (JLabel j : 라벨들){
+                THIS.remove(j);
+            }
         }
     }
 }

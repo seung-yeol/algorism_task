@@ -1,8 +1,8 @@
 package com.company;
 
-import com.company.다이얼로그.계산대화창;
-import com.company.다이얼로그.주문내역;
-import com.company.다이얼로그.주문대화창;
+/*import com.company.주문.계산대화창;*/
+import com.company.주문.주문내역;
+import com.company.주문.주문대화창;
 
 import javax.swing.*;
 import java.awt.*;
@@ -39,7 +39,7 @@ public class 주_화면 extends JFrame {
         대기 = 0;
         좌석생성();
         주문계산버튼();
-        메뉴바생성();
+        //메뉴바생성();
 
         addWindowListener(new WindowAdapter() {
             @Override
@@ -160,8 +160,8 @@ public class 주_화면 extends JFrame {
                 클릭된버튼.setBackground(Color.WHITE);
 
                 ArrayList<주문내역> 주문내역들 = 클릭된버튼.주문내역들얻기();
-                계산대화창 계산 = new 계산대화창(THIS, "계산", 주문내역들);
-                계산.setVisible(true);
+                /*계산대화창 계산 = new 계산대화창(THIS, "계산", 주문내역들);
+                계산.setVisible(true);*/
             }
         }
     };
