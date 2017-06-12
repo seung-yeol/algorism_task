@@ -8,7 +8,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
-import java.util.ArrayList;
 
 /**
  * Created by ce-416-22 on 2017-06-12.
@@ -17,11 +16,14 @@ public class 할인대화창 extends JDialog{
     private final int 창크기_가로 = 800;
     private final int 창크기_세로 = 800;
     private final int 라벨_가로 = 창크기_가로/5;
-    private final int 라벨_세로 = 창크기_세로/20;
+    private final int 라벨_세로 = 창크기_세로/18;
     private final JDialog THIS = this;
+
+    private 할인내역 할인내역;
 
     public 할인대화창(JFrame frame) {
         super(frame, "할인대화창 창");
+        할인내역 = 할인내역.getInstance();
 
         setSize(창크기_가로,창크기_세로);
         setLayout(null);
@@ -65,7 +67,7 @@ public class 할인대화창 extends JDialog{
     private ActionListener 완료리스너 = new ActionListener() {
         @Override
         public void actionPerformed(ActionEvent e) {
-
+            //할인내역.음식할인(메뉴판라벨.);
         }
     };
 
@@ -76,9 +78,11 @@ public class 할인대화창 extends JDialog{
         private int 가로;
         private JLabel 음식라벨;
         private JTextField 할인필드;
+        private String 음식명;
         private int 할인금액;
 
         private 메뉴판라벨(String 음식명) {
+            this.음식명 = 음식명;
             음식라벨 = new JLabel(음식명);
             할인필드 = new JTextField("0");
             할인필드.addActionListener(할인필드리스너);
