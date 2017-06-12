@@ -1,10 +1,12 @@
 package com.company;
 
-/*import com.company.주문.계산대화창;*/
 import com.company.주문.주문내역;
 import com.company.주문.주문대화창;
+import com.company.할인.할인대화창;
 
 import javax.swing.*;
+import javax.swing.event.MenuDragMouseEvent;
+import javax.swing.event.MenuDragMouseListener;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -39,7 +41,7 @@ public class 주_화면 extends JFrame {
         대기 = 0;
         좌석생성();
         주문계산버튼();
-        //메뉴바생성();
+        메뉴바생성();
 
         addWindowListener(new WindowAdapter() {
             @Override
@@ -88,7 +90,16 @@ public class 주_화면 extends JFrame {
         menu1.setText("관리");
 
         menu1.add(new JMenuItem("차림표"));
-        menu1.add(new JMenuItem("할인"));
+
+        JMenuItem 할인 = new JMenuItem("할인대화창");
+            할인.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    new 할인대화창(THIS);
+                }
+            });
+        menu1.add(할인);
+
         menu1.add(new JMenuItem("재고"));
         menu1.add(new JMenuItem("지출추가"));
 
@@ -160,8 +171,6 @@ public class 주_화면 extends JFrame {
                 클릭된버튼.setBackground(Color.WHITE);
 
                 ArrayList<주문내역> 주문내역들 = 클릭된버튼.주문내역들얻기();
-                /*계산대화창 계산 = new 계산대화창(THIS, "계산", 주문내역들);
-                계산.setVisible(true);*/
             }
         }
     };
