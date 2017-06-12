@@ -3,10 +3,11 @@ package com.company.메뉴;
 /**
  * Created by ce-416-28 on 2017-05-11.
  */
-public class 메뉴판 {
+public enum  메뉴판 {
+    INSTANCE;
     private final 음식[] 메뉴판;
 
-    public 메뉴판(){
+    메뉴판(){
         메뉴판 = new 음식[10];
 
         메뉴판[0] = new 음식("잡채밥",9000);
@@ -27,5 +28,9 @@ public class 메뉴판 {
 
     public 음식 음식얻기(int i){
         return 메뉴판[i-1];
+    }
+
+    public static 메뉴판 getInstance() {
+        return INSTANCE;
     }
 }

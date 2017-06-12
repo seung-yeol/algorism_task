@@ -26,7 +26,7 @@ public class 주문내역 {
     }
 
     public String 음식명얻기(){
-       return 음식.음식명받기();
+       return 음식명;
     }
     public int 수량얻기(){
         return 수량;

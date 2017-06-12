@@ -53,7 +53,7 @@ public class 주문대화창 extends JDialog{
     }
 
     private void 메뉴판생성(){
-        메뉴판 메뉴 = new 메뉴판();
+        메뉴판 메뉴 = 메뉴판.getInstance();
         음식[] 메뉴판 = 메뉴.메뉴판얻기();
         하단위치 = 메뉴판.length/3+2;
 
@@ -171,6 +171,7 @@ public class 주문대화창 extends JDialog{
             금액라벨변경();
         }
     };
+
     private ActionListener 차림표감소리스너 = new ActionListener() {
         @Override
         public void actionPerformed(ActionEvent e) {
