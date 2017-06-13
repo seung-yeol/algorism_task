@@ -80,7 +80,6 @@ public class 주문대화창 extends JDialog{
             add(음식감소[i]);
         }
     }
-
     private void 주문라벨생성(){
         주문라벨 주문라벨 = new 주문라벨();
             주문라벨.setBounds(버튼_가로, 버튼_세로*하단위치, 300, 20);
@@ -132,7 +131,7 @@ public class 주문대화창 extends JDialog{
     private void 금액라벨생성(){
         금액라벨 = new JLabel("0");
         금액라벨.setHorizontalAlignment(SwingConstants.RIGHT);
-        금액라벨.setBounds(버튼_가로, 버튼_세로*(하단위치)+20*(rowCount), 300, 20);
+        금액라벨.setBounds(버튼_가로, 버튼_세로*(하단위치)+20*(rowCount), 300, 40);
         add(금액라벨);
         금액라벨변경();
     }
@@ -142,10 +141,10 @@ public class 주문대화창 extends JDialog{
         for (주문내역 주문내역:주문내역들){
             총금액 += 주문내역.총금액얻기();
         }
-        총금액 = 금액계산기.총금액할인적용(총금액);
+        int 할인후금액 = 금액계산기.총금액할인적용(총금액);
 
         금액라벨.setLocation(버튼_가로, 버튼_세로*(하단위치)+20*(rowCount));
-        금액라벨.setText(Integer.toString(총금액));
+        금액라벨.setText("<html>할인 전 : "+총금액+"<br>할인 후 : "+할인후금액+"</html>" );
     }
 
     private ActionListener 차림표증가리스너 = new ActionListener() {

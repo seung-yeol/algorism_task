@@ -79,12 +79,25 @@ public class 할인대화창 extends JDialog{
         JLabel 라벨 = new JLabel("총금액할인율");
             라벨.setBounds(400, 라벨_세로 * 3, 가로, 라벨_세로 -25);
 
-        할인기준 = new JTextField("0");
-            할인기준.setBounds(420 + 가로, 라벨_세로 * 3, 가로, 라벨_세로 -25);
-            할인기준.setHorizontalAlignment(JTextField.RIGHT);
-        할인율 = new JTextField("0");
-            할인율.setBounds(440 + 가로 * 2, 라벨_세로 * 3, 가로, 라벨_세로 -25);
-            할인율.setHorizontalAlignment(JTextField.RIGHT);
+        int 할인기준액 = 할인내역.getInstance().총할인기준얻기();
+        if (할인기준액 != 0){
+            할인기준 = new JTextField(Integer.toString(할인기준액));
+        }
+        else{
+            할인기준 = new JTextField("0");
+        }
+        할인기준.setBounds(420 + 가로, 라벨_세로 * 3, 가로, 라벨_세로 -25);
+        할인기준.setHorizontalAlignment(JTextField.RIGHT);
+
+        int 총할인율 = 할인내역.getInstance().총할인율얻기();
+        if (총할인율 != 0){
+            할인율 = new JTextField(Integer.toString(총할인율));
+        }
+        else{
+            할인율 = new JTextField("0");
+        }
+        할인율.setBounds(440 + 가로 * 2, 라벨_세로 * 3, 가로, 라벨_세로 -25);
+        할인율.setHorizontalAlignment(JTextField.RIGHT);
 
         add(기준);
         add(율);
@@ -131,7 +144,14 @@ public class 할인대화창 extends JDialog{
         private 메뉴판라벨(String 음식명) {
             this.음식명 = 음식명;
             음식라벨 = new JLabel(음식명);
-            할인필드 = new JTextField("0");
+
+            int 할인금액 = 할인내역.getInstance().음식할인금액얻기(음식명);
+            if (할인금액 != 0){
+                할인필드 = new JTextField(Integer.toString(할인금액));
+            }
+            else {
+                할인필드 = new JTextField("0");
+            }
             할인필드.setHorizontalAlignment(JTextField.RIGHT);
         }
 
