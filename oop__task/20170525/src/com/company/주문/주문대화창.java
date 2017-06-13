@@ -1,5 +1,6 @@
 package com.company.주문;
 
+import com.company.금액계산기;
 import com.company.메뉴.메뉴판;
 import com.company.메뉴.음식;
 import com.company.주_화면;
@@ -141,6 +142,8 @@ public class 주문대화창 extends JDialog{
         for (주문내역 주문내역:주문내역들){
             총금액 += 주문내역.총금액얻기();
         }
+        총금액 = 금액계산기.총금액할인적용(총금액);
+
         금액라벨.setLocation(버튼_가로, 버튼_세로*(하단위치)+20*(rowCount));
         금액라벨.setText(Integer.toString(총금액));
     }

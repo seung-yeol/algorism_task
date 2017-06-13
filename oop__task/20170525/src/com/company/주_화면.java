@@ -155,7 +155,10 @@ public class 주_화면 extends JFrame {
     private ActionListener 주문클릭리스너 = new ActionListener() {
         @Override
         public void actionPerformed(ActionEvent e) {
-            if (클릭된버튼.getBackground().equals(Color.ORANGE)){
+            if (클릭된버튼 == null){
+                return;
+            }
+            else if (클릭된버튼.getBackground().equals(Color.ORANGE)){
                 클릭된버튼.setBackground(Color.WHITE);
 
                 ArrayList<주문내역> 주문내역들 = 클릭된버튼.주문내역들얻기();
