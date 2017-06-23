@@ -58,9 +58,6 @@ public class 출력 extends JDialog implements ActionListener{
             학점[i] = new JLabel();
         }
 
-        JButton 완료단추 = new JButton("확인완료");
-        완료단추.addActionListener(this);
-
         setLayout(null);
         hlbl.setBounds( 10, 30, 50, 30);  ilbl.setBounds( 70, 30, 50, 30);
         mlbl.setBounds(130, 30, 50, 30);  flbl.setBounds(190, 30, 50, 30);
@@ -75,7 +72,6 @@ public class 출력 extends JDialog implements ActionListener{
             총점[i].setBounds(x+370, y, 30, 20);  학점[i].setBounds(x+430, y, 30, 20);
             y = y + 25;
         }
-        완료단추.setBounds(220, 450, 100, 25);
 
         add(hlbl);  add(ilbl);  add(mlbl);  add(flbl);
         add(albl);  add(rlbl);  add(총계표시);  add(학점표시);
@@ -84,7 +80,6 @@ public class 출력 extends JDialog implements ActionListener{
             add(ftxt[i]);  add(atxt[i]);  add(rtxt[i]);
             add(총점[i]);  add(학점[i]);
         }
-        add(완료단추);
 
         addWindowListener(new WindowAdapter() {
             public void windowClosing(WindowEvent we) {

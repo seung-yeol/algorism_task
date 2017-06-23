@@ -17,7 +17,7 @@ public class Main {
         입력창.setVisible  (true);
 
         출력창.setSize     (600, 600);
-        출력창.setLocation (400, 400);
+        출력창.setLocation (800, 400);
         출력창.setResizable(false);
         출력창.setVisible  (true);
     }

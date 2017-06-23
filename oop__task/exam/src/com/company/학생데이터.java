@@ -38,9 +38,15 @@ public class 학생데이터 {
         for (String[] s: 정보들){
             int 총점;
             try {
-                총점 = Integer.parseInt(s[2]) + Integer.parseInt(s[3]) + Integer.parseInt(s[4]) + Integer.parseInt(s[5]);
+                총점 = 점수계산기.getInstance()
+                        .계산추가(Integer.parseInt(s[2]), 중간비율)
+                        .계산추가(Integer.parseInt(s[3]), 기말비율)
+                        .계산추가(Integer.parseInt(s[4]), 출석비율)
+                        .계산추가(Integer.parseInt(s[5]), 과제비율)
+                        .계산값받기();
             }catch (NumberFormatException e){
                 총점 = 0;
+                System.err.println("점수칸 채워주세요");
             }
 
             s[6] =Integer.toString(총점);
@@ -58,8 +64,8 @@ public class 학생데이터 {
             else if (총점 >= 학점점수[11])  s[7] = "D-";
             else s[7] = "F";
         }
-
     }
+
     public ArrayList 정보주기(){
         return 정보들;
     }
@@ -74,5 +80,19 @@ public class 학생데이터 {
         this.학점점수 = 학점점수;
     }
 
-
+    public int 중간비율얻기(){
+        return 중간비율;
+    }
+    public int 기말비율얻기(){
+        return 기말비율;
+    }
+    public int 출석비율얻기(){
+        return 출석비율;
+    }
+    public int 과제비율얻기(){
+        return 과제비율;
+    }
+    public int[] 학점점수얻기(){
+        return 학점점수;
+    }
 }

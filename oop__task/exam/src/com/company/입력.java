@@ -1,5 +1,6 @@
 package com.company;
 
+
 import javax.swing.*;
 import java.awt.event.*;
 import java.util.ArrayList;
@@ -11,6 +12,7 @@ public class 입력 extends JDialog implements ActionListener {
     private JTextField[] htxt, itxt, mtxt, ftxt, atxt, rtxt;
     private 학생데이터 학생정보;
     private 출력 출;
+    private JFrame 소유자;
 
     public static 입력 getInstance(JFrame f){
         if (Instance == null){
@@ -24,6 +26,7 @@ public class 입력 extends JDialog implements ActionListener {
     private 입력(JFrame 소유자, boolean 모달) {
         super(소유자, "성적자료 입력", 모달);
         int i, x, y;
+        this.소유자 = 소유자;
 
 
         JLabel hlbl = new JLabel("학   번", JLabel.CENTER);
@@ -45,7 +48,9 @@ public class 입력 extends JDialog implements ActionListener {
 
 
         JButton 완료단추 = new JButton("입력완료");
+        JButton 설정단추 = new JButton("설정");
         완료단추.addActionListener(this);
+        설정단추.addActionListener(this);
 
         setLayout(null);
         hlbl.setBounds( 10, 30, 50, 30);  ilbl.setBounds( 70, 30, 50, 30);
@@ -60,6 +65,7 @@ public class 입력 extends JDialog implements ActionListener {
             y = y + 25;
         }
         완료단추.setBounds(220, 450, 100, 25);
+        설정단추.setBounds(60, 450, 100, 25);
 
         add(hlbl);  add(ilbl);
         add(mlbl);  add(flbl);  add(albl);  add(rlbl);
@@ -68,6 +74,7 @@ public class 입력 extends JDialog implements ActionListener {
             add(ftxt[i]);  add(atxt[i]);  add(rtxt[i]);
         }
         add(완료단추);
+        add(설정단추);
 
         addWindowListener(new WindowAdapter() {
             public void windowClosing(WindowEvent we) {
@@ -77,18 +84,31 @@ public class 입력 extends JDialog implements ActionListener {
     }
 
     public void actionPerformed(ActionEvent e) {
-        ArrayList 정보들 = new ArrayList();
-        학생정보 = 학생정보.getInstance();
-        for(int i = 0 ; i < 줄수 ; i++){
-            String[] s  = new String[]{ htxt[i].getText(), itxt[i].getText(),
-                                        mtxt[i].getText(), ftxt[i].getText(),
-                                        atxt[i].getText(), rtxt[i].getText(),
-                                        "0", "0"};
-            정보들.add(s);
+        switch (e.getActionCommand()){
+            case "입력완료" :
+                ArrayList 정보들 = new ArrayList();
+                학생정보 = 학생정보.getInstance();
+
+                for(int i = 0 ; i < 줄수 ; i++){
+                    String[] s  = new String[]{ htxt[i].getText(), itxt[i].getText(),
+                            mtxt[i].getText(), ftxt[i].getText(),
+                            atxt[i].getText(), rtxt[i].getText(),
+                            "0", "0"};
+                    정보들.add(s);
+                }
+
+                학생정보.정보얻기(정보들);
+                출 = 출력.getInstance();
+                출.정보들얻기();
+                break;
+
+            case "설정" :
+                new 설정창(소유자);
+                break;
+
         }
 
-        학생정보.정보얻기(정보들);
-        출 = 출력.getInstance();
-        출.정보들얻기();
+
+
     }
 }
