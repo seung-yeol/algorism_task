@@ -9,7 +9,7 @@ public class 입력 extends JDialog implements ActionListener {
     private static 입력 Instance;
 
     private final int   줄수     = 15;
-    private JTextField[] htxt, itxt, mtxt, ftxt, atxt, rtxt;
+    private JTextField[] 학번, 이름, 중간, 기말, 출석, 과제;
     private 학생데이터 학생정보;
     private 출력 출;
     private JFrame 소유자;
@@ -29,21 +29,21 @@ public class 입력 extends JDialog implements ActionListener {
         this.소유자 = 소유자;
 
 
-        JLabel hlbl = new JLabel("학   번", JLabel.CENTER);
-        JLabel ilbl = new JLabel("이   름", JLabel.CENTER);
-        JLabel mlbl = new JLabel("중   간", JLabel.CENTER);
-        JLabel flbl = new JLabel("기   말", JLabel.CENTER);
-        JLabel albl = new JLabel("출   석", JLabel.CENTER);
-        JLabel rlbl = new JLabel("과   제", JLabel.CENTER);
+        JLabel 학번라벨 = new JLabel("학   번", JLabel.CENTER);
+        JLabel 이름라벨 = new JLabel("이   름", JLabel.CENTER);
+        JLabel 중간라벨 = new JLabel("중   간", JLabel.CENTER);
+        JLabel 기말라벨 = new JLabel("기   말", JLabel.CENTER);
+        JLabel 출석라벨 = new JLabel("출   석", JLabel.CENTER);
+        JLabel 과제라벨 = new JLabel("과   제", JLabel.CENTER);
 
-        htxt = new JTextField[줄수];  itxt = new JTextField[줄수];
-        mtxt = new JTextField[줄수];  ftxt = new JTextField[줄수];
-        atxt = new JTextField[줄수];  rtxt = new JTextField[줄수];
+        학번 = new JTextField[줄수];  이름 = new JTextField[줄수];
+        중간 = new JTextField[줄수];  기말 = new JTextField[줄수];
+        출석 = new JTextField[줄수];  과제 = new JTextField[줄수];
 
         for (i = 0; i < 줄수; i++) {
-            htxt[i] = new JTextField(3);  itxt[i] = new JTextField(4);
-            mtxt[i] = new JTextField(2);  ftxt[i] = new JTextField(2);
-            atxt[i] = new JTextField(2);  rtxt[i] = new JTextField(2);
+            학번[i] = new JTextField(3);  이름[i] = new JTextField(4);
+            중간[i] = new JTextField(2);  기말[i] = new JTextField(2);
+            출석[i] = new JTextField(2);  과제[i] = new JTextField(2);
         }
 
 
@@ -53,25 +53,25 @@ public class 입력 extends JDialog implements ActionListener {
         설정단추.addActionListener(this);
 
         setLayout(null);
-        hlbl.setBounds( 10, 30, 50, 30);  ilbl.setBounds( 70, 30, 50, 30);
-        mlbl.setBounds(130, 30, 50, 30);  flbl.setBounds(190, 30, 50, 30);
-        albl.setBounds(250, 30, 50, 30);  rlbl.setBounds(310, 30, 50, 30);
+        학번라벨.setBounds( 10, 30, 50, 30);  이름라벨.setBounds( 70, 30, 50, 30);
+        중간라벨.setBounds(130, 30, 50, 30);  기말라벨.setBounds(190, 30, 50, 30);
+        출석라벨.setBounds(250, 30, 50, 30);  과제라벨.setBounds(310, 30, 50, 30);
 
         x = 10;  y = 70;
         for (i = 0; i < 줄수; i++) {
-            htxt[i].setBounds(x, y, 50, 20);       itxt[i].setBounds(x+60, y, 50, 20);
-            mtxt[i].setBounds(x+120, y, 30, 20); ftxt[i].setBounds(x+190, y, 30, 20);
-            atxt[i].setBounds(x+250, y, 30, 20);  rtxt[i].setBounds(x+310, y, 30, 20);
+            학번[i].setBounds(x, y, 50, 20);       이름[i].setBounds(x+60, y, 50, 20);
+            중간[i].setBounds(x+120, y, 30, 20); 기말[i].setBounds(x+190, y, 30, 20);
+            출석[i].setBounds(x+250, y, 30, 20);  과제[i].setBounds(x+310, y, 30, 20);
             y = y + 25;
         }
         완료단추.setBounds(220, 450, 100, 25);
         설정단추.setBounds(60, 450, 100, 25);
 
-        add(hlbl);  add(ilbl);
-        add(mlbl);  add(flbl);  add(albl);  add(rlbl);
+        add(학번라벨);  add(이름라벨);
+        add(중간라벨);  add(기말라벨);  add(출석라벨);  add(과제라벨);
         for (i = 0; i < 줄수; i++) {
-            add(htxt[i]);  add(itxt[i]);  add(mtxt[i]);
-            add(ftxt[i]);  add(atxt[i]);  add(rtxt[i]);
+            add(학번[i]);  add(이름[i]);  add(중간[i]);
+            add(기말[i]);  add(출석[i]);  add(과제[i]);
         }
         add(완료단추);
         add(설정단추);
@@ -90,25 +90,20 @@ public class 입력 extends JDialog implements ActionListener {
                 학생정보 = 학생정보.getInstance();
 
                 for(int i = 0 ; i < 줄수 ; i++){
-                    String[] s  = new String[]{ htxt[i].getText(), itxt[i].getText(),
-                            mtxt[i].getText(), ftxt[i].getText(),
-                            atxt[i].getText(), rtxt[i].getText(),
+                    String[] s  = new String[]{ 학번[i].getText(), 이름[i].getText(),
+                            중간[i].getText(), 기말[i].getText(),
+                            출석[i].getText(), 과제[i].getText(),
                             "0", "0"};
                     정보들.add(s);
                 }
-
                 학생정보.정보얻기(정보들);
                 출 = 출력.getInstance();
-                출.정보들얻기();
+                출.출력실행();
                 break;
 
             case "설정" :
                 new 설정창(소유자);
                 break;
-
         }
-
-
-
     }
 }

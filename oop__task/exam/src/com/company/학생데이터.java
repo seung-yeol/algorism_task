@@ -73,7 +73,7 @@ public class 학생데이터 {
     public void 점수반영비율(int 중간비율, int 기말비율, int 출석비율, int 과제비율){
         this.중간비율 = 중간비율;
         this.기말비율 = 기말비율;
-        this.기말비율 = 기말비율;
+        this.출석비율 = 출석비율;
         this.과제비율 = 과제비율;
     }
     public void 학점점수설정(int[] 학점점수){

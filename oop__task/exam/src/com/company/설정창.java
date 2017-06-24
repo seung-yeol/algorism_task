@@ -56,11 +56,12 @@ public class 설정창 extends JDialog {
         add(a); add(b); add(c); add(d);
         add(plus); add(zero); add(minus);
 
+        int[] 학점점수들 = 학생정보.학점점수얻기();
         for (int i = 0; i < 학점점수필드.length; i++){
             int 가로 = 100 + 70*(i%3);
             int 세로 = 50 + 40*(i/3);
             학점점수필드[i] = new JTextField();
-            학점점수필드[i].setText(Integer.toString(학생정보.학점점수얻기()[i]));
+            학점점수필드[i].setText(Integer.toString(학점점수들[i]));
             학점점수필드[i].setBounds(가로, 세로, 50, 20);
             학점점수필드[i].setHorizontalAlignment(SwingConstants.CENTER);
             add(학점점수필드[i]);
